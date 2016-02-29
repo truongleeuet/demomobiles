@@ -1,0 +1,20 @@
+{
+  "name": "demomobiles",
+  "description": "Build tool up demo for mobiles",
+  "main": "app.js",
+  "authors": [
+    "truongnguyen"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6"
+  }
+}

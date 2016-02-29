@@ -1,0 +1,18 @@
+{
+  "name": "demomobiles",
+  "version": "1.0.0",
+  "description": "Build tool up demo for mobiles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "truongnguyen",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.4"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
