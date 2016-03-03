@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Storystrap Template</title>
+    <meta name="generator" content="Bootply"/>
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="public/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/css/style.css" rel="stylesheet">
+    <!--<link href="../public/stylesheets/circle.css" rel="stylesheet">-->
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+    <!--&lt;!&ndash;[if lt IE 9]>-->
+    <!--<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>-->
+    <![endif]-->
+    <!--<link href="css/styles.css" rel="stylesheet">-->
+
+</head>
+<body>
+
+
+<div class="container" style="margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    padding: 10px">
+
+    <img src="../public/images/footeradmicro.png"
+         style="display: block; margin-right: auto; margin-left: auto;margin-bottom: 25px">
+
+
+    <div class="container">
+        <div class="row">
+            <form class="form-horizontal" name="SignInform" action="/login/handerLogin" method="post">
+                <div class="form-group" style="margin: 0 auto; width:50%">
+                    <label for="userName" class="control-label col-xs-3" >User Name</label>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" name='userName' id='userName' placeholder="User Name">
+                    </div>
+                </div>
+                <div class="form-group" style="margin: 10px auto; width:50%">
+                    <label for="password" class="control-label col-xs-3">Password</label>
+                    <div class="col-xs-6">
+                        <input type="password" class="form-control" name='password' id='password'
+                               placeholder="Password">
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin: 0 auto; width:50%">
+                    <div class="col-xs-offset-3 col-xs-9">
+                        <button type="submit" class="btn btn-default">Login</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- script references -->
+<script src="public/lib/jquery/dist/jquery.js"></script>
+<script src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<!--<script src="../public/javascripts/fileupload.js"></script>-->
+<script>
+    var height = $(window).height();
+    $('body').css('height', height)
+</script>
+</body>
+</html>
