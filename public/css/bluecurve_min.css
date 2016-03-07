@@ -1,0 +1,45 @@
+.dynamic-slider-control {
+    -moz-user-focus: normal;
+    -moz-user-select: none;
+    background-image: url(Dashboard1.gif);
+    background-position: 6px 11px;
+    background-repeat: no-repeat;
+    cursor: default;
+    position: relative;
+    width: 195px;
+    overflow: hidden;
+}
+.horizontal {
+    height: 25px
+}
+.dynamic-slider-control input {
+    display: none
+}
+.dynamic-slider-control .handle {
+    -moz-user-select: none;
+    cursor: default;
+    font-size: 1px;
+    overflow: hidden;
+    position: absolute
+}
+.dynamic-slider-control.horizontal .handle {
+    background-image: url("handle.png");
+    height: 15px;
+    width: 9px
+}
+.dynamic-slider-control .line {
+    -moz-box-sizing: content-box;
+    background: url("line.png") repeat-x left top;
+;
+    behavior: url(boxsizing.htc);
+    box-sizing: content-box;
+    font-size: .01mm;
+    overflow: hidden;
+    position: absolute
+}
+.dynamic-slider-control.horizontal .line {
+    height: 5px
+}
+.dynamic-slider-control-140 {
+    background-image: url('dashboard2.gif') !important;
+}

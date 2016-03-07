@@ -16,13 +16,17 @@
     "ejs": "^2.4.1",
     "express": "^4.13.4",
     "express-session": "^1.13.0",
+    "jsinspect": "^0.8.0",
     "morgan": "^1.7.0"
   },
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-inject": "^3.0.0",
     "gulp-jscs": "^3.0.2",
     "gulp-jshint": "^2.0.0",
     "jshint": "^2.9.1",
-    "jshint-stylish": "^2.1.0"
+    "jshint-stylish": "^2.1.0",
+    "pm2": "^1.0.2",
+    "wiredep": "^3.0.0"
   }
 }

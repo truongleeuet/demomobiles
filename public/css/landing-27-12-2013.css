@@ -1,0 +1,1238 @@
+/* CSS Document */
+.font11 {font-size: 11px;}
+.cursor-pointer {cursor: pointer;}
+
+a, a:link, a:active, a:visited {
+    color:#333;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+a:hover {
+    color:#25AAE1 !important;
+    text-decoration: underline;
+    cursor: pointer;
+    outline: none;
+}
+
+.name{
+    font-size: 20px;
+    color: #f7941d;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: bold;
+}
+
+.container {
+    text-align:left;
+    width: 980px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+.container .tbl-list{
+    width: 100%;
+    margin: 0 auto;
+    margin: padding: 0;
+    line-height: 1.6em;
+}
+
+.container .tbl-list .txtora{
+    background-color: #f7941d !important;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    border-right: 2px solid #fff;
+}
+
+.container .tbl-list thead tr td{
+    background-color: #25aae2;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.container .tbl-list tr td{
+    text-align: center;
+    padding: 10px;
+}
+
+.container .tbl-list .odd{
+    background-color: #f1f1f1;
+}
+
+.tech ul{
+    margin-top: 10px;
+}
+
+.tech ul li{
+    line-height: 1.6em;
+    list-style: none;
+}
+
+.tech ul li:before {
+    content: "â€¢ "
+    color: #27a9e3; /* or whatever color you prefer */
+}
+
+.dott {
+    background: url("../../images/landing-27-12-2013/vietnam/dott.png") no-repeat scroll left top rgba(0, 0, 0, 0);
+    width: 10px;
+    height: 10px;
+}
+
+.ot{
+    padding-left: 5px;
+}
+
+.product-technical{
+    float: left;
+    padding: 20px 0 20px 0;
+    border-bottom: 1px solid #d7d7d7;
+}
+
+.review-product-detail{
+    float: left;
+    padding: 0 0 20px 0;
+    width: 100%;
+    border-bottom: 1px solid #D1D1D1;
+}
+
+a.trg-product-expand img.img-product-expand {
+    background: url("../../images/landing-27-12-2013/vietnam/expand.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+    height: 26px;
+    margin-left: 3px;
+}
+
+a.trg-product-expand img.img-product-expand:hover {
+    background: url("../../images/landing-27-12-2013/vietnam/expand.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+    height: 26px;
+    margin-left: 3px;
+}
+
+a.trg-product-collapse img.img-product-collapse {
+    background: url("../../images/landing-27-12-2013/vietnam/collapse.jpg") no-repeat scroll left top rgba(0, 0, 0, 0);
+    height: 26px;
+    margin-left: 3px;
+    width: 94px;
+}
+
+.rdetail{
+    overflow: -moz-hidden-unscrollable !important;
+}
+
+.rdetail ul li:before{
+    color: #27a9e3;
+    content: "â€¢ ";
+}
+
+.note{
+    font-size: 14px; font-weight: bold; color: #25aae1;
+}
+
+.headphone {
+    background: #f5f5f5;
+    height: 35px;
+    overflow:hidden;
+    border-bottom: 1px solid #f1f1f1;
+}
+.language {
+    float: left;
+    height: 35px;
+    line-height: 35px;
+    width: 211px;
+    overflow:hidden;
+    font-size: 11px;
+    font-family: tahoma;
+    color: #999999;
+}
+
+.language .country{
+    color: #666666;
+}
+
+.header{
+    height: 75px;
+    overflow:hidden;
+    margin-bottom: 20px;
+}
+.header-left {
+    float:left;
+    width: 280px;
+    overflow:hidden;
+}
+.header-right {
+    float: right;
+    width: 700px;
+    overflow:hidden;
+    margin: 45px 70px 0 0;
+}
+.hmenu {
+    float:right;
+    height: 35px;
+    overflow:hidden;
+}
+.hmenu td p {
+    height: 35px;
+    line-height: 35px;
+    overflow:hidden;
+    padding: 0 0 0 20px;
+}
+.hmenu td p a {text-decoration: none !important; font-size: 16px; color: #666666;}
+.hmenu td p a:hover {text-decoration: none !important;color: #25aae1 !important;}
+.hmenu td p a#mnproduct:hover {text-decoration: none !important;color: #000 !important;}
+.hmenu td p a.curr {color:#25aae1 !important;}
+.hmenu td p a.baba {color:#000 !important;}
+
+a.rdash-border{
+    color: #333 !important;
+}
+
+a.rdash-border:hover{
+    color: #25AAE1 !important;
+}
+
+
+
+.dlogin:hover .ic-login {
+    background-position:-16px -16px;
+    height: 16px;
+    width: 16px;
+}
+
+.dlogin:hover .txt-login {
+    color: #333 !important;
+}
+
+.dregister:hover .txt-register{
+    color: #333 !important;
+}
+
+.dregister:hover .ic-register {
+    background-position:0 -16px;
+    height: 16px;
+    width: 16px;
+}
+
+.barrow {
+    background-position:-34px -2px;
+    height: 16px;
+    width: 12px;
+}
+
+.drop-box:hover .barrow{
+    background-position:-34px -18px;
+    height: 16px;
+    width: 12px;
+}
+
+.harrow{
+    background-position:-34px -18px;
+    height: 16px;
+    width: 12px;
+}
+
+.ic-login{
+    background-position:-16px 0;
+    height: 16px;
+    width: 16px;
+}
+
+.ic-login:hover{
+    background-position:-16px -16px;
+    height: 16px;
+    width: 16px;
+}
+
+.ic-register{
+    background-position:0px 0;
+    height: 16px;
+    width: 16px;
+}
+
+.ic-register:hover{
+    background-position:0 -16px;
+    height: 16px;
+    width: 16px;
+}
+
+.ic-facebook{
+    background-position:-98px -32px;
+    height: 24px;
+    width: 24px;
+}
+
+.ic-facebook:hover{
+    background-position:-98px -57px;
+    height: 24px;
+    width: 24px;
+}
+
+.ic-googleplus{
+    background-position:-123px -32px;
+    height: 24px;
+    width: 24px;
+}
+
+.ic-googleplus:hover{
+    background-position:-123px -57px;
+    height: 24px;
+    width: 24px;
+}
+
+.ic-twitter{
+    background-position:-148px -32px;
+    height: 24px;
+    width: 24px;
+}
+
+.ic-twitter:hover{
+    background-position:-148px -57px;
+    height: 24px;
+    width: 24px;
+}
+
+.ic-mobile-marketing{
+    background-position:-175px -32px;
+    height: 64px;
+    width: 176px;
+}
+
+.ic-mobile-marketing:hover{
+    background-position:-175px -96px;
+    height: 64px;
+    width: 176px;
+}
+
+.ic-admicro{
+    background-position:-350px -32px;
+    height: 64px;
+    width: 176px;
+}
+
+.ic-admicro:hover{
+    background-position:-350px -96px;
+    height: 64px;
+    width: 176px;
+}
+
+a.l-jcl_prev {
+    background-position:-47px -32px;
+    width: 20px;
+    height: 36px;
+    display: block;
+    float: left;
+    margin: 27px 0;
+}
+
+a.l-jcl_prev:hover {
+    background-position:-47px -68px;
+    width: 20px;
+    height: 36px;
+    display: block;
+    float: left;
+    margin: 27px 0;
+}
+
+a.r-jcl_next {
+    background-position:-68px -33px;
+    width: 20px;
+    height: 36px;
+    display: block;
+    float: right;
+    margin: 27px 0;
+}
+
+a.r-jcl_next:hover {
+    background-position:-68px -69px;
+    width: 20px;
+    height: 36px;
+    display: block;
+    float: right;
+    margin: 27px 0;
+}
+
+.all_icon {
+    background-image: url("../../images/landing-27-12-2013/vietnam/all_icon.png");
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.tech{
+    background-image: url("../../images/landing-27-12-2013/vietnam/index_05.jpg");
+    position: relative;
+    width: 310px;
+    height: 200px;
+}
+
+.tech:hover{
+    background-image: url("../../images/landing-27-12-2013/vietnam/over1.jpg");
+}
+
+.butum{
+    position: absolute; top: 10px; right: 18px; cursor: pointer;
+}
+
+.vdetail{
+    position: absolute;
+    top: 83px;
+    left: 87px;
+    height: 44px;
+    width: 150px;
+    background-color: #ff961a;
+    border-bottom: 2px solid #dd7a05;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    display: none;
+}
+
+.vdetail a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 11px 25px 11px 14px;
+    position: absolute;
+    top: 0;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+    width: 110px;
+    background-image: url("../../images/landing-27-12-2013/vietnam/buttum_06.png");
+    background-position: 110px;
+    background-repeat: no-repeat;
+}
+
+.vdetail a:hover{
+    text-decoration: none;
+    color: #fff !important;
+    background-color: #ffb255;
+}
+
+.btn-x{
+    float: left; background-color: rgb(255, 150, 26); border-bottom: 2px solid rgb(221, 122, 5); border-radius: 2px; height: 37px; color: rgb(255, 255, 255); font-weight: bold; padding: 11px 0px 0px; width: 150px; position: relative; left: 265px;
+    border-bottom: 2px solid #dd7a05;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.btn-x a{
+    background-image: url("../../images/landing-27-12-2013/vietnam/buttum_06.png");background-position: 110px center;background-repeat: no-repeat;border-radius: 2px;color: #FFFFFF;font-size: 16px;font-weight: bold;padding: 14px 47px 15px 14px;width: 110px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.btn-x a:hover {
+    background-color: #FFB255;
+    color: #FFFFFF !important;
+    text-decoration: none;
+}
+
+.btn-x-2{
+    float: left; background-color: #25aae1;
+    height: 37px; color: rgb(255, 255, 255); font-weight: bold; padding: 11px 0px 0px; width: 150px; position: relative; left: 265px;
+    border-bottom: 2px solid #25aae1;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.btn-x-2 a{
+    background-image: url("../../images/landing-27-12-2013/vietnam/buttum_06.png");background-position: 110px center;background-repeat: no-repeat;border-radius: 2px;color: #FFFFFF;font-size: 16px;font-weight: bold;padding: 14px 47px 15px 14px;width: 110px;
+    -webkit-border-radius: 2px 2px 2px 2px;
+    -moz-border-radius: 2px 2px 2px 2px;
+    border-radius: 2px 2px 2px 2px;
+}
+
+.btn-x-2 a:hover {
+    background-color: #25aae1;
+    color: #FFFFFF !important;
+    text-decoration: none;
+}
+
+.setting{
+    background-image: url("../../images/landing-27-12-2013/vietnam/index_05-02.jpg");
+    position: relative;
+    width: 310px;
+    height: 200px;
+}
+
+.setting:hover{
+    background-image: url("../../images/landing-27-12-2013/vietnam/over2.jpg");
+}
+
+.rank{
+    background-image: url("../../images/landing-27-12-2013/vietnam/index_14.jpg");
+    position: relative;
+    width: 310px;
+    height: 200px;
+}
+
+.rank:hover{
+    background-image: url("../../images/landing-27-12-2013/vietnam/over-3.jpg");
+}
+
+.wup{
+    background-position: 92px -25px;
+    height: 24px;
+    width: 93px;
+}
+
+.wdown{
+    background-position: 24px 0;
+    height: 24px;
+    width: 24px;
+}
+
+.wdown:hover{
+    background-position: 0px -50px;
+    height: 24px;
+    width: 109px;
+}
+
+.icon_sp {
+    background-image: url("../../images/landing-27-12-2013/vietnam/icon_sp.png");
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dinnergold{
+    background-position: 0 0px;
+    height: 64px;
+    width: 64px;
+}
+
+.dinnergold:hover{
+    background-position: 0 -64px;
+    height: 64px;
+    width: 64px;
+}
+
+.wnetwork{
+    background-position: -64px 0px;
+    height: 64px;
+    width: 64px;
+}
+
+.wnetwork:hover{
+    background-position: -64px 64px;
+    height: 64px;
+    width: 64px;
+}
+
+.bbase{
+    background-position: -128px 0;
+    height: 64px;
+    width: 64px;
+}
+
+.bbase:hover{
+    background-position: -128px 64px;
+    height: 64px;
+    width: 64px;
+}
+
+.rbox1:hover .dinnergold{
+    background-position: 0 -64px;
+    height: 64px;
+    width: 64px;
+}
+
+.rbox2:hover .wnetwork{
+    background-position: -64px 64px;
+    height: 64px;
+    width: 64px;
+}
+
+.rbox3:hover .bbase{
+    background-position: -128px 64px;
+    height: 64px;
+    width: 64px;
+}
+
+.icon_whymobile {
+    background-image: url("../../images/landing-27-12-2013/vietnam/icon_taisaochonmobiles.png");
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.icon_close {
+    background-image: url("../../images/landing-27-12-2013/vietnam/close.png");
+    height: 32px;
+    width: 32px;
+}
+
+.ex-redic{
+    background-position: 0 0;
+    height: 33px;
+    width: 510px;
+}
+
+.ex-sys{
+    background-position: 0 -44px;
+    height: 35px;
+    width: 510px;
+}
+
+.sp-weblan{
+    background-position: 0 -85px;
+    height: 75px;
+    width: 510px;
+}
+
+.icon_tieude {
+    background-image: url("../../images/landing-27-12-2013/vietnam/text_tieude.png");
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.product-technical .left-col ul li{
+    list-style: circle;
+    line-height: 1.5em;
+    width: 100%;
+    float: left;
+}
+
+.submenu-box {
+    position:absolute;
+    z-index: 100;
+    margin-top: 5px;
+    text-align: left;
+    width: auto;
+    box-shadow: 1px 1px 8px #888888;
+}
+.submenu {
+    float: left;
+    clear:both;
+    height: 130px;
+    width: 215px;
+    overflow:hidden;
+    padding: 10px 20px 10px 20px;
+    background:#fff repeat left top;
+}
+.submenu-arrowbox {
+    clear:both;
+}
+.submenu-r {
+    padding: 0;
+    height: auto;
+    overflow:hidden;
+    float: left;
+}
+.submenu .submenu-r li {line-height: 35px; width: 210px; border-bottom: 1px solid #f1f1f1;}
+
+.submenu .submenu-r li a {text-decoration: none !important; color: #25aae1; font-size: 16px; line-height: normal;}
+/* contact */
+
+.vp-hn{
+    background-position: 0px 0px;
+    height: 50px;
+    width: 340px;
+}
+
+.vp-phone{
+    background-position: -24px -109px;
+    height: 24px;
+    width: 24px;
+}
+
+.vp-fax{
+    background-position: -48px -109px;
+    height: 24px;
+    width: 24px;
+}
+
+.vp-email{
+    background-position: -72px -109px;
+    height: 24px;
+    width: 24px;
+}
+
+.vp-hcm{
+    background-position: 0 -49px;
+    height: 50px;
+    width: 380px;
+}
+
+.contact-address{
+    background-position: 0 -109px;
+    height: 24px;
+    width: 24px;
+}
+
+.icon_contact {
+    background-image: url("../../images/landing-27-12-2013/vietnam/icon_contact.png");
+    display: inline-block;
+    vertical-align: middle;
+}
+.contact_ads{
+    margin-bottom: 140px;
+    float: left;
+}
+
+.contact_ads ul li{
+    line-height: 2.3em;
+    list-style: none;
+    position: relative;
+}
+.r-hotline{
+    background-image: url("../../images/landing-27-12-2013/vietnam/phone.png");
+    height: 30px;
+    width: 24px;
+    display: inline-block;
+}
+/* hoi-dap */
+
+.mem-hoi{
+    background-image: url("../../images/landing-27-12-2013/vietnam/icon_contact.png");
+    height: 42px;
+    width: 40px;
+}
+
+.support-traloi{
+    background-position: -43px 0px;
+    height: 42px;
+    width: 40px;
+}
+
+.icon_hoidap{
+    background-image: url("../../images/landing-27-12-2013/vietnam/icon_hoidap.png");
+    display: inline-block;
+    vertical-align: middle;
+}
+/* popup box */
+.pu-box {
+    background: url(../../images/landing-27-12-2013/vietnam/bluepopupbg_3.png) no-repeat left top;
+    height: 295px;
+    width: 323px;
+    position: absolute;
+}
+.pu-box-inner {
+    position: relative;
+    padding: 16px 12px 30px 5px;
+    height: 312px;
+}
+
+.pu-box-inner .tbl-content td {
+    height: 163px;
+    width: 340px;
+    vertical-align: middle;
+    text-align: center;
+}
+.pu-box .pu-box-inner a.orange, .pu-box .pu-box-inner a.orange:hover{
+    color: #ff6600;
+    text-decoration: underline;
+}
+.pu--relative {
+    position: relative;
+    height: 243px;
+}
+
+.pu-box-inner .pu-close {
+    cursor: pointer;
+    height: 35px;
+    left: 288px;
+    position: absolute;
+    top: -21px;
+    width: 30px;
+}
+
+#wrong_pwd img {
+    height: 91px;
+    left: 303px;
+    position: absolute;
+    top: 112px;
+    width: 245px;
+}
+
+#toannhPopupBackground{
+    display:none;
+    position:fixed;
+    _position:absolute; /* hack for internet explorer 6*/
+    height:100%;
+    width:100%;
+    top:0;
+    left:0;
+    background:#606060 repeat 0 0;
+    z-index:10000;
+}
+#toannhPopup{
+    display:none;
+    position:fixed;
+    _position:absolute; /* hack for internet explorer 6*/
+    z-index: 50000;
+}
+/* end popup box */
+
+.input-text {
+    padding: 6px;
+    width: 92%;
+    border: 1px solid #d9d9d9;
+    height: 15px;
+    color: #777;
+    font-size: 12px;
+}
+
+.err-input-text {
+    border: 1px solid #d81321;
+}
+
+.error-pasword {
+    height: 39px;
+    left: 341px;
+    position: absolute;
+    top: 141px;
+    width: 187px;
+}
+
+.btn-login{
+    float: right; position: relative; width: 170px; top: 10px; right: 2px;
+}
+
+.slideshow {
+    height: 560px;
+    overflow:hidden;
+    background: none repeat-x left top;
+}
+.slideshow-inner {
+    height: 560px;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 1920px;
+    position: relative;
+    text-align:left;
+}
+
+.nivoSlider, .nivo-main-image{
+    width: 1920px !important;
+}
+
+.nivo-controlNav-outer {
+    float: left;
+    position: absolute;
+    top: 510px;
+    width: 723px;
+    z-index: 20000;
+    left: 277px;
+    height: 60px;
+    padding-right: 45%;
+}
+
+.nivo-controlNav a {
+    border: 0 none;
+    cursor: pointer;
+    float: left;
+    height: 13px;
+    margin: 0 0 0 1px;
+    overflow: hidden;
+    text-decoration: none !important;
+    width: 15px;
+}
+
+.col630 {
+    width: 630px;
+    overflow:hidden;
+    float: left;
+}
+.col630 a, .col325 a {
+    text-decoration: none;
+    color: #656565;
+    font-family: arial;
+    padding-left: 10px;
+    background: url(../../images/landing-27-12-2013/vietnam/dot.jpg) no-repeat left;
+    position: relative;
+}
+
+.col630 a:hover, .col325 a:hover {
+    color: #25AAE1;
+}
+
+.col325 {
+    float: left;
+    margin-left: 24px;
+    overflow:hidden;
+    width: 325px;
+}
+.box-title {
+    font-family: arial;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #666666;
+}
+.title {
+    font-size: 20px;
+}
+.summary {color: #888888;}
+
+.bborder {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.view-more {
+    background: url(images/landing/redarrow.gif) no-repeat right 0;
+    padding-right: 13px;
+    font-weight:bold;
+    font-size: 11px;
+    line-height: normal;
+}
+.view-more a {text-decoration: none !important;}
+.view-more a:hover {
+    color: #87b938 !important;
+}
+
+/* login box */
+#login-box {
+    width: 235px;
+    height: 234px;
+    overflow:hidden;
+    padding: 0 4px 4px;
+    background: url(images/landing/loginbox.png) no-repeat left top;
+    position: absolute;
+    display:none;
+    z-index: 3000;
+}
+.lbox-content {
+    padding: 0 10px 14px;
+    height: 224px;
+}
+
+#login-box .login-btnbox {
+    margin-top: 5px;
+.margin-top: 0 !important;
+}
+.label-login
+{
+    color: #666666; font-size: 12px; padding: 20px 0 5px 0; float: left;
+}
+
+/* end login box */
+
+/* footer */
+.fslide {
+    height: 90px;
+    overflow:hidden;
+}
+.fslide-box {
+    height: 90px;
+
+}
+.fslide-titie {padding: 15px 0 15px 48px;}
+.fslice-inner {
+    height: 90px;
+    overflow: hidden;
+    position: relative;
+    width: 978px;
+    float: left;
+    text-align: left;
+}
+.bgr-container{
+    background:none repeat scroll 0 0 #F1F1F1;
+    padding-bottom: 40px;
+}
+.company{
+    background:url(../../images/landing-27-12-2013/vietnam/footer-slide/bgr-company.png) no-repeat center center;
+    margin: 0 auto;
+}
+.bb_content{
+    background:none repeat scroll 0 0 #fff; padding-bottom: 20px;
+}
+
+.titlebb{
+    font-size: 14px;
+    color: #666666;
+}
+
+.news_content {
+    text-align:left;
+    width: 980px;
+    margin: 0 auto;
+    overflow:hidden;
+}
+
+.news_content .tbl-list{
+    width: 100%;
+    margin: 0 auto;
+    margin: padding: 0;
+    line-height: 1.6em;
+}
+
+.news_content .tbl-list .txtora{
+    background-color: #f7941d !important;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.news_content .tbl-list thead tr td{
+    background-color: #25aae2;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.news_content .tbl-list tr td{
+    text-align: center;
+    padding: 10px;
+}
+
+.news_content .tbl-list .odd{
+    background-color: #f1f1f1;
+}
+/* Easy Slider */
+#slider{float: left; margin-left:50px !important;}
+#slider ul, #slider li{
+    margin:0;
+    width: 148px;
+    line-height: 70px; min-width: 148px; height: 90px;
+    padding:0;
+    list-style:none;
+}
+#slider li{
+    /*
+    define width and height of list item (slide)
+    entire slider area will adjust according to the parameters provided here
+    */
+    padding: 0 10px;
+    text-align: center;
+    overflow:hidden;
+    display: inline;
+}
+
+/* // Easy Slider */
+/* end footer */
+.spaceback{
+    background: #f1f1f1;height: 60px;
+}
+/* footer menu */
+.fmenu {
+    background:#fff;
+    height: 105px;
+    overflow:hidden;
+}
+.fmenu-inner {
+    background: #fff;
+    margin: 5px auto;
+    width: 885px;
+    overflow:hidden;
+    height: 105px;
+    padding-left: 95px;
+    position: relative;
+}
+
+.fmenu-inner .tinylogo{
+    position: absolute;
+    width: 96px;
+    height: 100px;
+    left: 0;
+}
+
+.footer-contact{
+    color: #999999; font-size: 11px; width: 385px; padding:23px 0 0 5px; float: left;
+}
+.footer-mobile-marketing, .footer-admicro-logo{
+    padding: 15px 0 0 0; float:left;
+}
+.follow-admarket{
+    padding: 20px 0 0 32px; float: left; line-height: 2em; color: #999999;;
+}
+/* end footer menu */
+
+
+/* slide show */
+.slide {position:relative; height: 525px; overflow:hidden;}
+.imgslidebg {width:100%; height: 525px; position:absolute; left: 0; top: 0; z-index: -1; margin: 0 auto;}
+.divslidebox {z-index: 100; height: 525px; overflow:hidden; margin: 0 auto; font-size: 56px;}
+
+#slide-img { height:300px; }
+#slide-img .headerimg { background-position: center top; background-repeat: no-repeat; width:100%; height:300px; position:absolute;}
+/* end slide show */
+
+.lan_expand{display:none;}
+.lan_collapse{display:block;}
+.dtclass{float: right;}
+
+.contact_hd{
+    margin-bottom: 140px;
+    float: left;
+}
+.contact_hd ul li{
+    list-style: none;
+    position: relative;
+}
+
+
+/*---------- News ---------------*/
+.news{padding-bottom: 20px; border-bottom: 1px solid #d7d7d7; float: left;}
+.box-image{border: 1px solid #d6d6d6; padding: 5px; margin-top: 5px; width: 158px; float: left;}
+.news-title{font-size: 18px; float: left; padding-left: 10px; font-weight: bold;width: 476px;}
+.news-sdesc{width: 476px;font-size: 14px; margin-top: 20px; padding-left: 10px; float: left;}
+.pagination{
+    margin-top: 30px; float: left; margin-bottom: 600px;
+}
+.pagenews{
+    padding: 15px; background: #dddddd; font-size: 12px; font-weight: bold; cursor: pointer;
+}
+
+.pagenews:hover{
+    background: #f7941e;
+    color: #fff;
+}
+
+.pcurr{
+    background: #f7941e;
+    color: #fff;
+}
+
+.news-content{font-size: 14px;}
+
+.news-content ul li{
+    line-height: 1.8em;
+}
+
+.cutr-input {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #D6D6D6;
+    display: block;
+    font-size: 11px;
+    height: 23px;
+    line-height: 23px;
+    margin: 0;
+    padding: 0 5px;
+    width: 168px;
+}
+
+.hothot {
+    background:url(../../images/landing-27-12-2013/vietnam/new.gif) no-repeat center center;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    right: -35px;
+    top: -10px;
+}
+
+/**************************************************************
+						CASE STUDY
+***************************************************************/
+
+.tbl-case td{
+    text-align: center;
+    padding: 5px !important;
+    color: #25AAE1;
+    font-weight: bold;
+}
+
+.tbl-case td span{
+    display: inline-block;
+    width:320px;
+    height:200px;
+}
+
+.image01{background-image:url(../../images/landing-27-12-2013/vietnam/case/images01-nocolor.jpg);}
+.image01:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images01.jpg);}
+.image02{background-image:url(../../images/landing-27-12-2013/vietnam/case/images02-nocolor.jpg);}
+.image02:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images02.jpg);}
+.image03{background-image:url(../../images/landing-27-12-2013/vietnam/case/images03-nocolor.jpg);}
+.image03:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images03.jpg);}
+.image04{background-image:url(../../images/landing-27-12-2013/vietnam/case/images04-nocolor.jpg);}
+.image04:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images04.jpg);}
+.image05{background-image:url(../../images/landing-27-12-2013/vietnam/case/images05-nocolor.jpg);}
+.image05:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images05.jpg);}
+.image06{background-image:url(../../images/landing-27-12-2013/vietnam/case/images06-nocolor.jpg);}
+.image06:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images06.jpg);}
+.image07{background-image:url(../../images/landing-27-12-2013/vietnam/case/images07-nocolor.jpg);}
+.image07:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images07.jpg);}
+.image08{background-image:url(../../images/landing-27-12-2013/vietnam/case/images08-nocolor.jpg);}
+.image08:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images08.jpg);}
+.image09{background-image:url(../../images/landing-27-12-2013/vietnam/case/images09-nocolor.jpg);}
+.image09:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images09.jpg);}
+.image10{background-image:url(../../images/landing-27-12-2013/vietnam/case/images10-nocolor.jpg);}
+.image10:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images10.jpg);}
+.image11{background-image:url(../../images/landing-27-12-2013/vietnam/case/images11-nocolor.jpg);}
+.image11:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images11.jpg);}
+.image12{background-image:url(../../images/landing-27-12-2013/vietnam/case/images12-nocolor.jpg);}
+.image12:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images12.jpg);}
+.image13{background-image:url(../../images/landing-27-12-2013/vietnam/case/images13-nocolor.jpg);}
+.image13:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/images13.jpg);}
+.image14{background-image:url(../../images/landing-27-12-2013/vietnam/case/sac_ngoc_khang_nocolor.jpg);}
+.image14:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/sac_ngoc_khang.jpg);}
+.image15{background-image:url(../../images/landing-27-12-2013/vietnam/case/VNA_nocolor.jpg);}
+.image15:hover{background-image:url(../../images/landing-27-12-2013/vietnam/case/VNA.jpg);}
+
+.test123456{width: auto;}
+.image011{background-image:url(../../images/landing-27-12-2013/vietnam/gallery/popup_wipe.jpg);}
+.image021{background-image:url(../../images/landing-27-12-2013/vietnam/gallery/popup_multichoice.jpg);}
+.image031{background-image:url(../../images/landing-27-12-2013/vietnam/gallery/popup_game.jpg);}
+.image041{background-image:url(../../images/landing-27-12-2013/vietnam/gallery/620px.png);}
+.image061{background-image:url(../../images/landing-27-12-2013/vietnam/gallery/popuphappy.jpg);}
+.image091{background-image:url(../../images/landing-27-12-2013/vietnam/gallery/popup_wipex.jpg);}
+.image101{background-image:url(../../images/landing-27-12-2013/vietnam/gallery/popup_touch.jpg);}
+.image131{background-image:url(../../images/landing-27-12-2013/vietnam/gallery/popup_video.jpg);}
+.image111{background-image:url(../../images/landing-27-12-2013/vietnam/gallery/tpbank.jpg);}
+.image121{background-image:url(../../images/landing-27-12-2013/vietnam/gallery/henieken.jpg);}
+
+.image_casebrand{float: left; background:none repeat scroll 0 0 #fff;padding: 0;}
+.casepoup_colunmleft{float:left;width: 65%;}
+.casepoup_colunmright {float: left;margin-left: 50px;width: 230px;}
+#devPopup{display:none;position:fixed;_position:absolute;z-index:50010}
+#devPopupBackground{display:none;position:fixed;_position:absolute;height:100%;width:100%;top:0;left:0;background:#606060 url(images/popupbg.gif) repeat 0 0;z-index:10000}
+.casebrand_solution,.casebrand_result{margin-top:20px}
+.casebrand_body{padding-left:42px;color:#5c5c5c;line-height:1.6em}
+.casebrand_body li{content:"â€¢ ";color:#25aae1}
+.t-result{background-position:-35px 0;height:32px;width:29px}
+.t-solution{background-position:0 0;height:32px;width:32px}
+.t-problem{background-position:-4px -35px;height:32px;width:24px}
+.caseicon{background-image:url(../../images/landing-27-12-2013/vietnam/case/icon-case.png);display:inline-block;vertical-align:middle}
+.casepoup_colunmleft p{color:#333}
+.casebrand_header{height:auto;float:left;width:980px;padding:10px 0; margin-bottom: 30px;}
+.casebrand_brand{font-weight:700;font-size:30px;float:left;padding-right:20px}
+.casebrand_infomation{float:left;margin-top:20px;width:800px}
+.casebrand_name{font-weight:700;font-size:25px;margin-bottom:20px}
+.slcdiv{border-top:1px solid #f1f1f1;border-bottom:1px dotted #ddd;font-weight:700;padding:10px 10px 10px 20px}
+.onview{border-bottom:1px solid orange;}
+.overviewbtn, .viewdemobtn{cursor: pointer;padding:10px 0;}
+.casebrand_warp{float:left;position:relative;width:980px;padding:10px 0 80px}
+.title_problem,.title_solution,.title_result{font-size:17px}
+.slash{color:#f7941e;font-weight:700;font-size:16px}
+.casebtn{left:0;width:auto;margin:30px 0 0 60px}
+.mobile-qrcode{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode.jpg);height:323px;width:321px;}
+
+.mobile-qrcode-suakun{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_suakun.jpg);height:323px;width:321px;}
+.mobile-qrcode-vtc-sponsored{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_game-kiem-hiep_sponsored.jpg);height:323px;width:321px;}
+.mobile-qrcode-gogi{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_gogi.jpg);height:323px;width:321px;}
+.mobile-qrcode-highland_popup{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_highland_popup.jpg);height:323px;width:321px;}
+.mobile-qrcode-hsbc_inpage{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_hsbc_inpage.jpg);height:323px;width:321px;}
+.mobile-qrcode-mazda_sponsored{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_mazda_sponsored.jpg);height:323px;width:321px;}
+.mobile-qrcode-ps_catfish{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_PS_catfish.jpg);height:323px;width:321px;}
+.mobile-qrcode-ps_inpage{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_PS_inpage.jpg);height:323px;width:321px;}
+.mobile-qrcode-ps_sponsored{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_PS_sponsored.jpg);height:323px;width:321px;}
+.mobile-qrcode-asonor-catfish{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_asonor_catfish.jpg);height:323px;width:321px;}
+.mobile-qrcode-asonor-inpage{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_asonor-inpage.jpg);height:323px;width:321px;}
+.mobile-qrcode-chevrolet-popup{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_chevrolet_popup.jpg);height:323px;width:321px;}
+.mobile-qrcode-chevrolet-sponsored{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/qrcode_chevrolet_sponsored.jpg);height:323px;width:321px;}
+.mobile-qrcode-sohagame-medium{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/Game_beat_medium.jpg);height:323px;width:321px;}
+.mobile-qrcode-sohagame-sponsor{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/Game_beat_sponsor.jpg);height:323px;width:321px;}
+.mobile-qrcode-topkid{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/Topkid.jpg);height:323px;width:321px;}
+.mobile-qrcode-psaudio{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/Ps_audio.jpg);height:323px;width:321px;}
+.mobile-qrcode-psgame{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/PS_game.jpg);height:323px;width:321px;}
+.mobile-qrcode-vna{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/Vietnamairlines_catfish.png);height:323px;width:321px;}
+.mobile-qrcode-sac-ngoc-khang-inpage{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/Sac_ngoc_khang_inpage.png);height:323px;width:321px;}
+.mobile-qrcode-sac-ngoc-khang-medium-banner{background-image:url(../../images/landing-27-12-2013/vietnam/case/qrcode/Sac_ngoc_khang_medium.png);height:323px;width:321px;}
+
+.qrnote1 {font-size: 18px;position: absolute;right: 58px;top: 270px;}
+.qrnote2 {font-size: 18px;position: absolute;right: 58px;top: 1100px;}
+.qrnote3 {font-size: 18px;position: absolute;right: 58px;top: 1996px;}
+
+.box1{position:absolute;top:300px;right:30px;}
+.box2{position:absolute;top:1125px;right:30px;}
+.box3{position:absolute;top:2025px;right:30px;}
+
+.price-header{padding: 10px 0 !important;font-size: 13px;font-weight: 600; position: relative;}
+.price-txt{padding: 10px 0 !important;font-size: 13px;}
+.price-format{background-color: #44b87b !important;}
+.price-os{background-color: #ffc905 !important;}
+.price-vnd{background-color: #ed5724 !important;}
+.price-qch{background-color: #1fc4f4 !important;}
+.price-dm{background-color: #2b3991 !important;}
+.price-btn-demo{background-color: #2d3e96; color: #fff; padding: 4px 8px; border-radius: 4px; font-weight: 700;}

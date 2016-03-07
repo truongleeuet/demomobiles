@@ -1,0 +1,31 @@
+/* Easy Slider */
+
+#slider{float: left;}
+#slider ul, #slider li{
+    margin:0; line-height: 60px; min-width: 120px; height: 60px;
+    padding:0;
+    list-style:none;
+}
+#slider li{
+    /*
+        define width and height of list item (slide)
+        entire slider area will adjust according to the parameters provided here
+    */
+    padding: 0 30px;
+    text-align: center;
+    overflow:hidden;
+    display: inline;
+}
+a.jcl_prev {
+    background:url(images/logo_btn_prev.gif) no-repeat center center;
+    width: 35px; height: 60px;
+    display: block;
+    float: left;
+}
+a.jcl_next {
+    background:url(images/logo_btn_next.gif) no-repeat center center;
+    width: 35px; height: 60px;
+    display: block;
+    float: right;
+}
+/* // Easy Slider */
