@@ -1,0 +1,66 @@
+
+
+<script type="text/javascript">
+
+    function startUpload(){
+        var filename = document.getElementById('videoFile').value;
+        var ext = !uploadValidExtension(filename, new Array('.mp4')) ? false : true;
+        if(!ext)
+        {
+            parent.document.getElementById('f2_upload_process').innerHTML = 'Invalide file type!';
+            parent.document.getElementById('f2_upload_result1005').style.display='block';
+        }
+        else
+        {
+            parent.document.getElementById('f2_upload_process').style.display = '';
+            parent.document.getElementById('f2_upload_result1005').style.display='none';
+            document.getElementById('frmUploadVideo').submit();
+            return true;
+        }
+    }
+    function stopUpload(success)
+    {
+        parent.parent.document.getElementById('f2_upload_process').style.display = 'none';
+        if(success != '')
+        {
+            parent.parent.document.getElementById('f2_upload_result1005').innerHTML = success;
+            parent.parent.document.getElementById('f2_upload_result1005').style.display='block';
+            parent.parent.document.getElementById('hddFileVideo40').value = '';
+            return;
+        }
+        document.getElementById('videoFile').value = '';
+        return true;
+    }
+    function uploadValidExtension(fileName, arrAllowType)
+    {
+        if(fileName == "")
+        {
+            return false;
+        }
+        fileName = fileName.toLowerCase();
+        var extension = fileName.substr(fileName.toLowerCase().lastIndexOf('.'), fileName.length);
+        var check = false;
+        for(var i=0; i <arrAllowType.length; i++)
+        {
+            if(arrAllowType[i] == extension)
+            {
+                check = true;
+                break;
+            }
+        }
+        return check;
+    }// JavaScript Document
+</script>
+<script type="text/javascript">
+    var ifrTip = parent.parent.document.getElementById('focusToolTipVideo').innerHTML;
+</script>
+<form style="margin:0;padding:0; font-size: 12px; background: #efefef;" name="frmUploadVideo" id="frmUploadVideo" action="#" method="post" enctype="multipart/form-data" target="upload_video_target" >
+    <input style="margin:0;padding:0; font-size: 12px;.background: #fff;width: 195px; float:left;" type="file" name="videoFile" id="videoFile" onchange="startUpload();" onclick="parent.parent.httooltip('#divVideo', ifrTip, 300, 5,0, 'right', 8);" onblur="ifm_img_remove();" />
+</form>
+<script type="text/javascript">
+    function ifm_img_remove()
+    {
+        parent.parent.removeFocusToolTipImage('right');
+    }
+</script>
+<iframe id="upload_video_target" name="upload_video_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>

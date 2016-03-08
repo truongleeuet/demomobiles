@@ -1,0 +1,66 @@
+
+
+<script type="text/javascript">
+
+    function startUpload(){
+        var filename = document.getElementById('imageFile').value;
+
+        if(!uploadValidExtension(filename, new Array('.jpg', '.gif', '.png')))
+        {
+            parent.document.getElementById('f1_upload_result205').innerHTML = 'Invalide file type!';
+            parent.document.getElementById('f1_upload_result205').style.display='block';
+        }
+        else
+        {
+            parent.document.getElementById('f1_upload_process').style.display = '';
+            parent.document.getElementById('f1_upload_result205').style.display='none';
+            document.getElementById('frmUploadImage').submit();
+            return true;
+        }
+    }
+    function stopUpload(success)
+    {
+        parent.parent.document.getElementById('f1_upload_process').style.display = 'none';
+        if(success != '')
+        {
+            parent.parent.document.getElementById('f1_upload_result205').innerHTML = success;
+            parent.parent.document.getElementById('f1_upload_result205').style.display='block';
+            parent.parent.document.getElementById('hddFileName40').value = '';
+            return;
+        }
+        document.getElementById('imageFile').value = '';
+        return true;
+    }
+    function uploadValidExtension(fileName, arrAllowType)
+    {
+        if(fileName == "")
+        {
+            return false;
+        }
+        fileName = fileName.toLowerCase();
+        var extension = fileName.substr(fileName.toLowerCase().lastIndexOf('.'), fileName.length);
+        var check = false;
+        for(var i=0; i <arrAllowType.length; i++)
+        {
+            if(arrAllowType[i] == extension)
+            {
+                check = true;
+                break;
+            }
+        }
+        return check;
+    }// JavaScript Document
+</script>
+<script type="text/javascript">
+    var ifrTip = parent.parent.document.getElementById('focusToolTipImage').innerHTML;
+</script>
+<form style="margin:0;padding:0; font-size: 12px; background: #efefef;" name="frmUploadImage" id="frmUploadImage" action="https://mobilead.vn/home/upload_popup" method="post" enctype="multipart/form-data" target="upload_target" >
+    <input style="margin:0;padding:0; font-size: 12px;.background: #fff;width: 195px; float:left;" type="file" name="imageFile" id="imageFile" onchange="startUpload();" onclick="parent.parent.httooltip('#divImage', ifrTip, 300, 5,0, 'right', 8);" onblur="ifm_img_remove();" />
+</form>
+<script type="text/javascript">
+    function ifm_img_remove()
+    {
+        parent.parent.removeFocusToolTipImage('right');
+    }
+</script>
+<iframe id="upload_target" name="upload_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>

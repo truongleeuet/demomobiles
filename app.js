@@ -11,6 +11,7 @@ var expressSession = require('express-session');
 var app = express();
 var login = require('./routes/login');
 var index = require('./routes/index');
+var inpage = require('./routes/inpage');
 
 //app.set('views' , './views');
 //app.set('view engine', 'ejs');
@@ -34,6 +35,7 @@ app.use(express.static('src/views'));
 
 app.use('/', index);
 app.use('/login', login);
+app.use('/inpage', inpage);
 
 app.use(function(req, res, next) {
     var err = new Error('Not Found');

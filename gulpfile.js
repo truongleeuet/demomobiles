@@ -22,7 +22,7 @@ gulp.task('style', function() {
 gulp.task('inject', function() {
     var wiredep =  require('wiredep').stream;
     var inject = require('gulp-inject');
-    var injectSrc = gulp.src(['./public/css/*.css', './public/js/*.js'], {read: false});
+    var injectSrc = gulp.src(['./public/css/*.css', './public/js/*.js', './public/js/**/*.js'], {read: false});
     var injectOptions = {
         ignorePath: '/public'
     };
