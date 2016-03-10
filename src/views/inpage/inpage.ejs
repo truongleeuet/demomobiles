@@ -40,7 +40,7 @@
 
 
 <div class="page-content create-ad-page">
-    <form name="frmCreateAd" id="frmCreateAd" action="/inpage/upload_inpage" method="post">
+    <form name="frmCreateAd" id="frmCreateAd" action="/inpage/upload_inpage" method="post" enctype="multipart/form-data">
         <!--start step 1 CPM -->
         <div id="divStep1" class="step-div">
             <div class="div-step-2">
@@ -65,10 +65,13 @@
                         <tr>
                             <td width="465">
                                 <p class="step-field-title">
-                                    <b class="ver-middle">Site quảng cáo</b> <span class="text-999 ver-middle">(tùy chọn)</span> <img id="imgCopyAdLoading" alt="Loading..." src="../images/ajaxLoading.gif" class="ver-middle marleft5" style="display:none;">
+                                    <b class="ver-middle">Site quảng cáo</b> <span class="text-999 ver-middle">(tùy chọn)</span>
+                                    <img id="imgCopyAdLoading" alt="Loading..." src="../images/ajaxLoading.gif"
+                                         class="ver-middle marleft5" style="display:none;">
                                 </p>
                                 <p>
-                                    <select class="crt-select-ad" id="slcBanner" name="slcBanner" onchange="slcBannerChange(this.value, '20', '60');enableBrowserfile();">
+                                    <select class="crt-select-ad" id="slcBanner" name="slcBanner"
+                                            onchange="slcBannerChange(this.value, '20', '60');enableBrowserfile();">
                                         <option value="0">
                                             Bạn hãy chọn một site quảng cáo:
                                         </option>
@@ -138,31 +141,6 @@
                                 </div>
                                 <!-- end title -->
 
-                                <!-- click to call -->
-                                <div class="iscall">
-                                    <p class="step-field-title" style="">
-                                        <b class="ver-middle">Click to call</b> <b
-                                                class="text-999 bold cursor-pointer marleft5 ver-middle"
-                                                onclick="toannh_tooltip(this, 'Click to call', 'Lựa chọn điền số điện thoại, khi khách hàng click vào quảng cáo của bạn sẽ trực tiếp gọi điện đến số điện thoại mà bạn đặt.');">[?]</b>
-                                        <input type="checkbox" name="chkPhoneCall" id="chkPhoneCall"
-                                               class="ver-middle marleft10"
-                                               onclick="tracking_url_view_sponsor(this, '#phoneBox');"
-                                               style="margin-left: 80px;"/>
-                                    </p>
-
-                                    <p class="padtop5 padbottom5" id="phoneBox" style="display: none;">
-                                        <input type="text" class="input140" maxlength="15" name="phoneNumber"
-                                               id="phoneNumber"/>
-                                    </p>
-                                    <div class="padtop5 padbottom5" id="errorPhoneView" style="display:none;">
-                                        <ul class="error">
-                                            <li>
-                                                Số điện thoại không hợp lệ.
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <!-- end click to call -->
 
                                 <!-- third3 -->
                                 <p class="step-field-title" style="">
@@ -182,130 +160,85 @@
                                     các sản phẩm, không sử dụng text hoặc logo thương hiệu. Bạn chú ý ảnh
                                     phải rõ nét, không bị khuyết, bị mờ.</p>
                                 <input type="hidden" name="hddFileName300" id="hddFileName300"/>
-                </div>
+                                <div class="isurlimage">
+                                    <p class="step-field-title">
+                                        <b class="ver-middle">Ảnh dọc</b> <b
+                                                class="ver-middle text-999 bold cursor-pointer"
+                                                onclick="toannh_tooltip(this, 'Hình ảnh', 'Chọn hình ảnh cho quảng cáo của bạn, nên có liên hệ với tiêu đề và nội dung quảng cáo. Khuyến cáo bạn nên chọn ảnh rõ nét. Dung lượng tối đa là 100KB.');">[?]</b>
+                                        <img id="f1_upload_process" class="ver-middle"
+                                             style="display:none; margin-left: 5px; margin-top: 3px;" alt="loading..."
+                                             src="../images/ajaxLoading.gif"/>
+                                    </p>
+                                    <p class="isurlimage" style='width:353px;'>Bạn phải upload ít nhất 1 ảnh (định dạng
+                                        jpg, png, gif) với kích thước: <span style="color: red;">640x1280px</span> và
+                                        dung lượng tối đa <span style="color: green;">100KB</span></p>
 
-            </div>
-            </p>
+                                    <div class="myclear">
+                                        <div class="float-left" id="divImage" style="width:215px;">
+                                            <input type="file" name="img_vertical" id="img_vertical"/>
+                                            <br class="clearboth"/>
+                                            <p id="f1_upload_result205"
+                                               style="display:none; margin:0;padding:3px 0 0 0;font-size: 12px; color: red;"></p>
+                                            <p id="focusToolTipImage" style="display: none;">Bạn chỉ sử dụng hình ảnh
+                                                các sản phẩm, không sử dụng text hoặc logo thương hiệu. Bạn chú ý ảnh
+                                                phải rõ nét, không bị khuyết, bị mờ.</p>
+                                            <input type="hidden" name="hddFileName300" id="hddFileName300"/>
+                                        </div>
+                                        <p class="ver-middle">Size: 640x1280px</p>
+                                    </div>
 
-            <div class="isurlimage">
-                <p class="step-field-title">
-                    <b class="ver-middle">Ảnh dọc</b> <b
-                            class="ver-middle text-999 bold cursor-pointer"
-                            onclick="toannh_tooltip(this, 'Hình ảnh', 'Chọn hình ảnh cho quảng cáo của bạn, nên có liên hệ với tiêu đề và nội dung quảng cáo. Khuyến cáo bạn nên chọn ảnh rõ nét. Dung lượng tối đa là 100KB.');">[?]</b>
-                    <img id="f1_upload_process" class="ver-middle"
-                         style="display:none; margin-left: 5px; margin-top: 3px;" alt="loading..."
-                         src="../images/ajaxLoading.gif"/>
-                </p>
-                <p class="isurlimage" style='width:353px;'>Bạn phải upload ít nhất 1 ảnh (định dạng
-                    jpg, png, gif) với kích thước: <span style="color: red;">640x1280px</span> và
-                    dung lượng tối đa <span style="color: green;">100KB</span></p>
+                                    <div class="padbottom5" id="errorStep1Image" style="display:none;">
+                                        <ul class="error">
+                                            <li>
+                                                Vui lòng upload một ảnh.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="isurlimage">
+                                    <p class="step-field-title">
+                                        <b class="ver-middle">Ảnh ngang</b> <b
+                                                class="ver-middle text-999 bold cursor-pointer"
+                                                onclick="toannh_tooltip(this, 'Hình ảnh', 'Chọn hình ảnh cho quảng cáo của bạn, nên có liên hệ với tiêu đề và nội dung quảng cáo. Khuyến cáo bạn nên chọn ảnh rõ nét. Dung lượng tối đa là 100KB.');">[?]</b>
+                                        <img id="f1_upload_process" class="ver-middle"
+                                             style="display:none; margin-left: 5px; margin-top: 3px;" alt="loading..."
+                                             src="../images/ajaxLoading.gif"/>
+                                    </p>
+                                    <p class="isurlimage" style='width:353px;'>Bạn phải upload ít nhất 1 ảnh (định dạng
+                                        jpg, png, gif) với kích thước: <span style="color: red;">640x1280px</span> và
+                                        dung lượng tối đa <span style="color: green;">100KB</span></p>
 
-                <div class="myclear">
-                    <div class="float-left" id="divImage" style="width:215px;">
-                        <input type="file" name="img_vertical" id="img_vertical"/>
-                        <br class="clearboth"/>
-                        <p id="f1_upload_result205"
-                           style="display:none; margin:0;padding:3px 0 0 0;font-size: 12px; color: red;"></p>
-                        <p id="focusToolTipImage" style="display: none;">Bạn chỉ sử dụng hình ảnh
-                            các sản phẩm, không sử dụng text hoặc logo thương hiệu. Bạn chú ý ảnh
-                            phải rõ nét, không bị khuyết, bị mờ.</p>
-                        <input type="hidden" name="hddFileName300" id="hddFileName300"/>
-                    </div>
-                    <p class="ver-middle">Size: 640x1280px</p>
-                </div>
+                                    <div class="myclear">
+                                        <div class="float-left" id="divImage" style="width:215px;">
+                                            <input type="file" name="img_horizontal" id="img_horizontal"/>
+                                            <br class="clearboth"/>
+                                            <p id="f1_upload_result205"
+                                               style="display:none; margin:0;padding:3px 0 0 0;font-size: 12px; color: red;"></p>
+                                            <p id="focusToolTipImage" style="display: none;">Bạn chỉ sử dụng hình ảnh
+                                                các sản phẩm, không sử dụng text hoặc logo thương hiệu. Bạn chú ý ảnh
+                                                phải rõ nét, không bị khuyết, bị mờ.</p>
+                                            <input type="hidden" name="hddFileName300" id="hddFileName300"/>
+                                        </div>
+                                        <p class="ver-middle">Size: 640x1280px</p>
+                                    </div>
 
-                <div class="padbottom5" id="errorStep1Image" style="display:none;">
-                    <ul class="error">
-                        <li>
-                            Vui lòng upload một ảnh.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="isurlimage">
-                <p class="step-field-title">
-                    <b class="ver-middle">Ảnh ngang</b> <b
-                            class="ver-middle text-999 bold cursor-pointer"
-                            onclick="toannh_tooltip(this, 'Hình ảnh', 'Chọn hình ảnh cho quảng cáo của bạn, nên có liên hệ với tiêu đề và nội dung quảng cáo. Khuyến cáo bạn nên chọn ảnh rõ nét. Dung lượng tối đa là 100KB.');">[?]</b>
-                    <img id="f1_upload_process" class="ver-middle"
-                         style="display:none; margin-left: 5px; margin-top: 3px;" alt="loading..."
-                         src="../images/ajaxLoading.gif"/>
-                </p>
-                <p class="isurlimage" style='width:353px;'>Bạn phải upload ít nhất 1 ảnh (định dạng
-                    jpg, png, gif) với kích thước: <span style="color: red;">640x1280px</span> và
-                    dung lượng tối đa <span style="color: green;">100KB</span></p>
-
-                <div class="myclear">
-                    <div class="float-left" id="divImage" style="width:215px;">
-                        <input type="file" name="img_horizontal" id="img_horizontal"/>
-                        <br class="clearboth"/>
-                        <p id="f1_upload_result205"
-                           style="display:none; margin:0;padding:3px 0 0 0;font-size: 12px; color: red;"></p>
-                        <p id="focusToolTipImage" style="display: none;">Bạn chỉ sử dụng hình ảnh
-                            các sản phẩm, không sử dụng text hoặc logo thương hiệu. Bạn chú ý ảnh
-                            phải rõ nét, không bị khuyết, bị mờ.</p>
-                        <input type="hidden" name="hddFileName300" id="hddFileName300"/>
-                    </div>
-                    <p class="ver-middle">Size: 640x1280px</p>
-                </div>
-
-                <div class="padbottom5" id="errorStep1Image" style="display:none;">
-                    <ul class="error">
-                        <li>
-                            Vui lòng upload một ảnh.
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <p class="step-field-title">
-                <b>Từ khóa liên quan</b> <span
-                        class="text-999">(mỗi từ khóa ngăn cách bởi dấu phẩy)</span> <b
-                        class="text-999 bold cursor-pointer marleft10"
-                        onclick="toannh_tooltip(this, 'Từ khóa liên quan', 'Nhập các từ khóa liên quan đến sản phẩm của bạn, mỗi từ khóa ngăn cách bởi dấu phẩy, ví dụ: điện thoại,tablet,máy tính bảng. Bạn có thể không nhập mục này.');">[?]</b>
-            </p>
-
-            <div>
-                <p class="padtop5 padbottom5">
-                    <input type="text" class="input365" name="keyword" id="keyword"
-                           onfocus="keyword_ins();"/>
-                </p>
-            </div>
-
-            <div class="input-url-demo">
-                <p class="step-field-title">
-                    <b>Url demo</b> <span class="text-999">(Nếu có)</span> <b
-                            class="text-999 bold cursor-pointer marleft10"
-                            onclick="toannh_tooltip(this, 'Url demo', 'Nhập Url demo cho quảng cáo trên Mobile nếu có.');">[?]</b>
-                </p>
-
-                <div>
-                    <p class="padtop5 padbottom5">
-                        <input type="text" class="input365" name="urldemo" id="urldemo"/>
-                    </p>
+                                    <div class="padbottom5" id="errorStep1Image" style="display:none;">
+                                        <ul class="error">
+                                            <li>
+                                                Vui lòng upload một ảnh.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <button type="submit" value="submit">Tiếp tục</button>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
-
-            <p class="padbottom5 padtop10 myclear" id="step1_continue">
-                <a href="javascript:void(0);" class="btn"
-                   onclick="step1_continue_click_popup_catfish();">
-										<span>
-											Tiếp tục										</span>
-                </a>
-            </p>
-            </td>
-            <p class="step-field-title">&nbsp;</p>
-
-            </p>
-            </tr>
-            </table>
         </div>
+    </form>
 </div>
-</div>
-
-</div>
-<!-- end page-content -->
 
 
 <style>

@@ -32,6 +32,7 @@ app.use(expressSession({
 }));
 app.use(express.static('public'));
 app.use(express.static('src/views'));
+//app.use(express.static('routes'));
 
 app.use('/', index);
 app.use('/login', login);
