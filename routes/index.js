@@ -6,7 +6,7 @@ var path = require('path');
 var routerIndex = express.Router();
 
 routerIndex.get('/', function(req, res, next) {
-    res.sendFile(path.resolve(__dirname, '../src/views/popup_ver1.html'))
+    res.render(path.resolve(__dirname, '../src/views/index'))
 });
 
 routerIndex.use(function(err, req, res, next) {

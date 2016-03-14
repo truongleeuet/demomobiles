@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- bower:js -->
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="/css/bluecurve_min.css">
+    <link rel="stylesheet" href="/css/datepicker.css">
+    <link rel="stylesheet" href="/css/ie_min.css">
+    <link rel="stylesheet" href="/css/jquery.autocomplete.css">
+    <link rel="stylesheet" href="/css/jquery.multiSelect.css">
+    <link rel="stylesheet" href="/css/jquery.multiselect2side.css">
+    <link rel="stylesheet" href="/css/landing-27-12-2013.css">
+    <link rel="stylesheet" href="/css/reset_min.css">
+    <link rel="stylesheet" href="/css/scrollable.css">
+    <link rel="stylesheet" href="/css/structure.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/superbly-tagfield.css">
+    <!--endinject-->
+    <!-- inject:js -->
+    <script src="/js/custom.js"></script>
+    <script src="/js/jquery-1.4.4.min.js"></script>
+    <script src="/js/plugins_all_min.js"></script>
+    <script src="/js/popup.js"></script>
+    <script src="/js/slider/slider_min.js"></script>
+    <!--endinject-->
+    <script>
+        $(function () {
+            $("#header").load("../header.html");
+            $("#footer").load("../footer.html");
+        });
+    </script>
+</head>
+<body>
+<div id="header"></div>
+
+
+<div class="page-content create-ad-page">
+    <div class="step-label step-1">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td>
+                    <p class="label">
+                        Tạo quảng cáo </p>
+                </td>
+
+                <td>
+                    <a class="step-faq" href="https://mobilead.vn/faqs/topic/6" target="_blank">
+                        Câu hỏi thường gặp [FAQs] </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <table cellpadding="0" cellspacing="0" border="0" style="margin-left: 72px">
+        <tr>
+            <td width="465">
+                <p class="step-field-title">
+                    <b class="ver-middle">Site quảng cáo</b> <span class="text-999 ver-middle">(tùy chọn)</span>
+                    <img id="imgCopyAdLoading" alt="Loading..." src="../images/ajaxLoading.gif"
+                         class="ver-middle marleft5" style="display:none;">
+                </p>
+                <p>
+                    <select class="crt-select-ad" id="slcBanner" name="slcBanner">
+                        <option value="0">
+                            Bạn hãy chọn một site quảng cáo:
+                        </option>
+                        <option value="0">dantri.com.vn</option>
+                        <option value="1">kenh14.vn</option>
+                        <option value="2">afamily.vn</option>
+                        <option value="3">cafef.vn</option>
+                        <option value="4">giadinh.net</option>
+                    </select>
+                </p>
+            </td>
+        </tr>
+    </table>
+    <form name="frmCreateAd" id="frmCreateAd" action="/bigArticle/upload_bigArticle" method="post"
+          enctype="multipart/form-data">
+        <!--start step 1 CPM -->
+        <div id="divStep1" class="step-div">
+            <div class="div-step-2">
+
+
+                <div class="step-box">
+                    <table cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                            <td width="465">
+                                <p class="step-field-title">
+                                    <b class="ver-middle">Site quảng cáo</b> <span class="text-999 ver-middle">(tùy chọn)</span>
+                                    <img id="imgCopyAdLoading" alt="Loading..." src="../images/ajaxLoading.gif"
+                                         class="ver-middle marleft5" style="display:none;">
+                                </p>
+                                <p>
+                                    <select class="crt-select-ad" id="slcBanner" name="slcBanner">
+                                        <option value="0">
+                                            Bạn hãy chọn một site quảng cáo:
+                                        </option>
+                                        <option value="0">dantri.com.vn</option>
+                                        <option value="1">kenh14.vn</option>
+                                        <option value="2">afamily.vn</option>
+                                        <option value="3">cafef.vn</option>
+                                        <option value="4">giadinh.net</option>
+                                    </select>
+                                </p>
+                                <p class="step-field-title">
+                                    <b>URL đích</b>
+                                    <b class="text-999">Ví dụ:</b>
+                                    <span class="text-999">http://www.yourwebsite.com/ </span>
+                                    <b class="text-999 bold cursor-pointer marleft10"
+                                       onclick="toannh_tooltip(this, 'Url đích', 'Trang web khi người dùng click vào quảng cáo sẽ được chuyển đến trang này.');">[?]</b>
+                                </p>
+
+                                <p class="padtop5 padbottom5">
+                                    <input type="text" class="input365" name="desUrl" id="desUrl"
+                                           onkeyup="step1_desUrlKeyUp('#desUrl', '#errorDesUrl');"
+                                           onchange="step1_desUrlKeyUp('#desUrl', '#errorDesUrl');"/>
+                                </p>
+
+                                <!-- check landing popup -->
+                                <div class="islandingpopup">
+                                    <p class="step-field-title">
+                                        <b class="ver-middle">Landing Popup</b> <b
+                                                class="text-999 bold cursor-pointer marleft5 ver-middle"
+                                                onclick="toannh_tooltip(this, 'Popup Landing.', 'Bật cửa sổ website của bạn ngay trên site quảng cáo khi người dùng click vào quảng cáo.');">[?]</b>
+                                        <input type="checkbox" name="chkLandingPopup" id="chkLandingPopup"
+                                               class="ver-middle marleft10" checked="checked"
+                                               style="margin-left: 61px;"/>
+                                    </p>
+                                </div>
+                                <!-- end check landing popup -->
+
+
+                                <div class="padtop5 padbottom5" id="errorDesUrl" style="display:none;">
+                                    <ul class="error">
+                                        <li>
+                                            URL không hợp lệ.
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- title -->
+                                <p class="step-field-title">
+                                    <b>Tên quảng cáo</b> <span class="text-999"><span
+                                                id="titleLimit">20</span> ký tự.</span> <b
+                                            class="text-999 bold cursor-pointer marleft10"
+                                            onclick="toannh_tooltip(this, 'Tiêu đề', 'Thể hiện tiêu đề quảng cáo của bạn thật ngắn gọn, súc tích, nổi bật, đơn giản. Mục đích nổi bật sản phẩm, độ dài không quá 20 ký tự. Hạn chế các ký tự lạ, các ký tự đặc biệt, không phù hợp với ngữ cảnh.');">[?]</b>
+                                </p>
+                                <div>
+                                    <input type="text" class="input365" name="title" id="title"
+                                           onkeydown="setp1_limiter(20, '', '#title', '', '#titleLimit', '#step1_suggest_title', 'Tiêu đề quảng cáo', '#errorTitle', event);"
+                                           onkeyup="setp1_limiter(20, '', '#title', '', '#titleLimit', '#step1_suggest_title', 'Tiêu đề quảng cáo', '#errorTitle', event);"
+                                           onchange="setp1_limiter(20, '', '#title', '', '#titleLimit', '#step1_suggest_title', 'Tiêu đề quảng cáo', '#errorTitle');"/>
+                                </div>
+
+                                <div class="padtop5 padbottom5" id="errorTitle" style="display:none;">
+                                    <ul class="error">
+                                        <li>
+                                            Bạn chưa nhập tiêu đề quảng cáo.
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- end title -->
+
+
+                                <!-- third3 -->
+                                <p class="step-field-title" style="">
+                                    <b class="ver-middle">Chọn file banner</b><b
+                                            class="text-999 bold cursor-pointer marleft5 ver-middle"
+                                            onclick="toannh_tooltip(this, 'Ad-Selfserving', 'Ad-Selfserving là lựa chọn sử dụng hình ảnh bằng htmlcode.');">[?]</b>
+                                <p class="isurlimage" style='width:353px;'>Bạn phải upload file banner định dạng: <span
+                                            style="color: red;">zip</span>
+                                    <div class="myclear">
+                                        <div class="float-left" id="divImage" style="width:215px;">
+                                            <input type="file" name="file_banner" id="file_banner"/>
+
+                                            <br class="clearboth"/>
+                                <p id="f1_upload_result205"
+                                   style="display:none; margin:0;padding:3px 0 0 0;font-size: 12px; color: red;"></p>
+                                <p id="focusToolTipImage" style="display: none;">Bạn chỉ sử dụng hình ảnh
+                                    các sản phẩm, không sử dụng text hoặc logo thương hiệu. Bạn chú ý ảnh
+                                    phải rõ nét, không bị khuyết, bị mờ.</p>
+                                <input type="hidden" name="hddFileName300" id="hddFileName300"/>
+                                <div class="isurlimage">
+                                    <p class="step-field-title">
+                                        <b class="ver-middle">Ảnh dọc</b> <b
+                                                class="ver-middle text-999 bold cursor-pointer"
+                                                onclick="toannh_tooltip(this, 'Hình ảnh', 'Chọn hình ảnh cho quảng cáo của bạn, nên có liên hệ với tiêu đề và nội dung quảng cáo. Khuyến cáo bạn nên chọn ảnh rõ nét. Dung lượng tối đa là 100KB.');">[?]</b>
+                                        <img id="f1_upload_process" class="ver-middle"
+                                             style="display:none; margin-left: 5px; margin-top: 3px;" alt="loading..."
+                                             src="../images/ajaxLoading.gif"/>
+                                    </p>
+                                    <p class="isurlimage" style='width:353px;'>Bạn phải upload ít nhất 1 ảnh (định dạng
+                                        jpg, png, gif) với kích thước: <span style="color: red;">640x1280px</span> và
+                                        dung lượng tối đa <span style="color: green;">100KB</span></p>
+
+                                    <div class="myclear">
+                                        <div class="float-left" id="divImage" style="width:215px;">
+                                            <input type="file" name="img_vertical" id="img_vertical"/>
+                                            <br class="clearboth"/>
+                                            <p id="f1_upload_result205"
+                                               style="display:none; margin:0;padding:3px 0 0 0;font-size: 12px; color: red;"></p>
+                                            <p id="focusToolTipImage" style="display: none;">Bạn chỉ sử dụng hình ảnh
+                                                các sản phẩm, không sử dụng text hoặc logo thương hiệu. Bạn chú ý ảnh
+                                                phải rõ nét, không bị khuyết, bị mờ.</p>
+                                            <input type="hidden" name="hddFileName300" id="hddFileName300"/>
+                                        </div>
+                                        <p class="ver-middle">Size: 640x1280px</p>
+                                    </div>
+
+                                    <div class="padbottom5" id="errorStep1Image" style="display:none;">
+                                        <ul class="error">
+                                            <li>
+                                                Vui lòng upload một ảnh.
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <button type="submit" value="submit">Tiếp tục</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<style>
+    .ins-box-css {
+        display: none;
+        width: 360px;
+        position: absolute;
+        z-index: 1000000001;
+    }
+
+    .ins-img-css1 {
+        left: 37px;
+        z-index: 10000000009;
+        position: relative;
+        display: block;
+        clear: both;
+        float: left;
+    }
+
+    .ins-box2-css {
+        border: 1px #c7c7c7 solid !important;
+        border-radius: 0.4em;
+        box-shadow: 1px 0px 15px #CCC;
+    }
+
+    .ins-p-css {
+        font-size: 15px;
+        color: #3b3b3b;
+    }
+
+    .ins-span-css {
+        position: absolute;
+        top: 15px;
+        right: 54px;
+        cursor: pointer;
+    }
+
+    .ins-img-css {
+        position: absolute;
+        top: 40px;
+        left: 16px;
+    }
+
+    .ins-div-css {
+        margin-top: 9px;
+    }
+</style>
+
+<script type="text/javascript" src="/js/popup.js"></script>
+
+<link href="../css/landing-27-12-2013.css" rel="stylesheet" type="text/css"/>
+<style>
+    body {
+        background: none repeat scroll 0 0 #EFEFEF;
+        color: #333333;
+        font-family: Tahoma;
+        font-size: 11px;
+        line-height: 1.5;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-left, .header-right {
+        display: inline;
+        float: left;
+        overflow: hidden;
+        width: 200px;
+    }
+
+    .header-right {
+        width: 780px;
+        margin: 0;
+    }
+
+    .header {
+        margin: 0;
+        height: 57px;
+    }
+
+    #footer-inner {
+        color: #8c8c8c;
+        background: url(../images/landing-27-12-2013/vietnam/bgline.gif) repeat-x left top;
+        font-weight: bold;
+        padding-top: 12px;
+    }
+
+    a.btn:hover {
+        color: #FFFFFF !important;
+        cursor: pointer;
+        outline: medium none;
+        text-decoration: underline;
+    }
+</style>
+<!-- footer slide show -->
+<div id="footer"></div>
+
+<script>
+    var choice = document.getElementById('slcBanner');
+    choice.onchange = function () {
+        console.log(choice.value)
+    }
+</script>
+</body>
+</html>

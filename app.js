@@ -12,6 +12,9 @@ var app = express();
 var login = require('./routes/login');
 var index = require('./routes/index');
 var inpage = require('./routes/inpage');
+var top = require('./routes/top_banner');
+var bigArticle = require('./routes/bigArticle');
+var popup = require('./routes/popup');
 
 //app.set('views' , './views');
 //app.set('view engine', 'ejs');
@@ -37,7 +40,9 @@ app.use(express.static('src/views'));
 app.use('/', index);
 app.use('/login', login);
 app.use('/inpage', inpage);
-
+app.use('/top', top);
+app.use('/bigArticle', bigArticle);
+app.use('/popup', popup);
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;

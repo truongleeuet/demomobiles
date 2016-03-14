@@ -1,4 +1,7 @@
 /**
+ * Created by Admin on 3/14/2016.
+ */
+/**
  * Created by Admin on 3/8/2016.
  */
 var express = require('express');
@@ -40,47 +43,47 @@ routerInpage.post('/upload_inpage', upload.any(), function(req, res, next) {
     var file = req.files;
 
     var content = 'var mbzone8870 = new zoneM(8870, {'+
-    '"html": "",'+
-    '"css": "",'+
-    '"type": "14",'+
-    '"mobilead":1,'+
-    '"df": []'+
-    '});'+
-    'mbzone8870.addBanners({'+
-    '"cpc": [],'+
-    '"cpm": ['+
-    '{'+
-    '"id": "267453",'+
-    '"cid": "1047556",'+
-    '"src": "' + file[0].originalname + '",'+
-    '"title": "Tâm bình",'+
-    '"content": "",'+
-    '"link": "'+ req.body.desUrl +'",'+
-    '"type": "14",'+
-    '"os": "",'+
-    '"os_v": "",'+
-    '"dv_t": "",'+
-    '"dv_m": "",'+
-    '"br": "",'+
-    '"br_v": "",'+
-    '"l": "",'+
-    '"la": "",'+
-    '"statustext": "",'+
-    '"cpa": "0",'+
-    '"buttonnote": "",'+
-    '"moblocation": "0",'+
-    '"provider": "",'+
-    '"link3rd": "",'+
-    '"clk_call": "",'+
-    '"ispopup": "0",'+
-    '"color": "",'+
-    '"blogo": "'+ file[1].originalname+'",'+
-    '"bname": "",'+
-    '"view": "0",'+
-    '"download": 0,'+
-    '"star": 0,'+
-    '}]'+
-    '});';
+        '"html": "",'+
+        '"css": "",'+
+        '"type": "14",'+
+        '"mobilead":1,'+
+        '"df": []'+
+        '});'+
+        'mbzone8870.addBanners({'+
+        '"cpc": [],'+
+        '"cpm": ['+
+        '{'+
+        '"id": "267453",'+
+        '"cid": "1047556",'+
+        '"src": "' + file[0].originalname + '",'+
+        '"title": "Tâm bình",'+
+        '"content": "",'+
+        '"link": "'+ req.body.desUrl +'",'+
+        '"type": "14",'+
+        '"os": "",'+
+        '"os_v": "",'+
+        '"dv_t": "",'+
+        '"dv_m": "",'+
+        '"br": "",'+
+        '"br_v": "",'+
+        '"l": "",'+
+        '"la": "",'+
+        '"statustext": "",'+
+        '"cpa": "0",'+
+        '"buttonnote": "",'+
+        '"moblocation": "0",'+
+        '"provider": "",'+
+        '"link3rd": "",'+
+        '"clk_call": "",'+
+        '"ispopup": "0",'+
+        '"color": "",'+
+        '"blogo": "'+ file[1].originalname+'",'+
+        '"bname": "",'+
+        '"view": "0",'+
+        '"download": 0,'+
+        '"star": 0,'+
+        '}]'+
+        '});';
 
     fs.writeFile(fileName + '/' + title + '.ads', content, function(err) {
         if(err) {
