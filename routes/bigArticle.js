@@ -124,7 +124,8 @@ routerInpage.post('/upload_bigArticle', upload.any(), function(req, res, next) {
                 if(err) {
                     next(err);
                 }
-                res.send('Done');
+                var html_res = '../uploads/images/bigArticle/' + title + '/' + title + '.html';
+                res.render(path.resolve(__dirname, '../src/views/results'), {html: html_res});
             });
         })
 

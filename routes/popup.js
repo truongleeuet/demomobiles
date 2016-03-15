@@ -125,16 +125,12 @@ routerInpage.post('/upload_popup', upload.any(), function(req, res, next) {
                 if(err) {
                     next(err);
                 }
-                res.send('Done');
+                var html_res = '../uploads/images/popup/' + title + '/' + title + '.html';
+                res.render(path.resolve(__dirname, '../src/views/results'), {html: html_res});
             });
         })
 
     });
-
-
-
-
-
 
 
 });

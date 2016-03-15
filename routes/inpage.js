@@ -82,14 +82,6 @@ routerInpage.post('/upload_inpage', upload.any(), function(req, res, next) {
     '}]'+
     '});';
 
-    fs.writeFile(fileName + '/' + title + '.ads', content, function(err) {
-        if(err) {
-            next(err);
-        }
-
-    });
-
-
     var site = req.body.slcBanner;
 
     switch(site) {
@@ -111,22 +103,33 @@ routerInpage.post('/upload_inpage', upload.any(), function(req, res, next) {
         default:
             site = './public/site/page_inpage/dantri.html';
     }
-    fs.readFile(site, 'utf-8', function(err, data) {
+
+    fs.writeFile(fileName + '/' + title + '.ads', content, function(err) {
         if(err) {
-            console.error(err)
+            next(err);
         }
-
-        //console.log(data);
-
-        var result = data.replace('http://demo.admicro.vn/mobile/background/mb_code.ads', fileName + '/' + title + '.ads');
-
-        fs.writeFile(fileName + '/' + title + '.html', result, function(err) {
+        fs.readFile(site, 'utf-8', function(err, data) {
             if(err) {
-                next(err);
+                console.error(err)
             }
-            res.send('Done');
-        });
-    })
+
+            //console.log(data);
+
+            var result = data.replace('http://demo.admicro.vn/mobile/background/mb_code.ads', './' + title + '.ads');
+
+            fs.writeFile(fileName + '/' + title + '.html', result, function(err) {
+                if(err) {
+                    next(err);
+                }
+                var html_res = '../uploads/images/inpage/' + title + '/' + title + '.html';
+                res.render(path.resolve(__dirname, '../src/views/results'), {html: html_res});
+            });
+        })
+    });
+
+
+
+
 
 });
 

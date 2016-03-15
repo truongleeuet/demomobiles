@@ -42,7 +42,8 @@ gulp.task('serve', function() {
     pm2.connect(true, function () {
         pm2.start({
             name: 'server',
-            script: './bin/main.js'
+            script: './bin/main.js',
+            min_uptime: "200s"
         }, function () {
             console.log('pm2 started');
             pm2.streamLogs('all', 0);

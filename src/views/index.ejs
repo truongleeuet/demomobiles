@@ -380,22 +380,6 @@
         <!--start step 1 CPM -->
         <div id="divStep1" class="step-div">
             <div class="div-step-2">
-                <div class="step-label step-1">
-                    <table width="100%" cellpadding="0" cellspacing="0" border="0">
-                        <tr>
-                            <td>
-                                <p class="label">
-                                    Tạo quảng cáo </p>
-                            </td>
-
-                            <td>
-                                <a class="step-faq" href="https://mobilead.vn/faqs/topic/6" target="_blank">
-                                    Câu hỏi thường gặp [FAQs] </a>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-
                 <div class="step-box">
                     <table cellpadding="0" cellspacing="0" border="0">
                         <tr>
@@ -822,37 +806,24 @@
 <div id="footer"></div>
 <script>
     var choice = document.getElementById('slcBanner');
-    var top = document.getElementById('top');
-    var popup = document.getElementById('popup');
-    var inpage = document.getElementById('inpage');
-    var bigArticle = document.getElementById('bigArticle');
-    var arr = [top];
-    console.log(arr);
+//    var top = document.getElementById('top');
+//    var popup = document.getElementById('popup');
+//    var inpage = document.getElementById('inpage');
+//    var bigArticle = document.getElementById('bigArticle');
+//    var arr = [top];
+//    console.log(arr);
 
 
     choice.onchange = function () {
         var x = document.getElementById("slcBanner").value;
-        console.log(choice.value);
+        //console.log(choice.value);
         if(x == 0) {
-            console.log('top1')
+            //console.log('top1')
             $("#top1").css("display","block");
+        } else {
+            $(".bannerid").css("display","none");
+            $("#top" + x).css("display","block");
         }
-        $(".bannerid").css("display","none");
-        $("#top" + x).css("display","block");
-//        if (choice.value === 1) {
-//            top.style.display = 'block';
-//        }
-//        if (choice.value === 2) {
-//            top.style.display = 'block';
-//        }
-//        if (choice.value === 3) {
-//            top.style.display = 'block';
-//        }
-//        if (choice.value === 4) {
-//            top.style.display = 'block';
-//        }
-
-
 
     }
 </script>

@@ -15,6 +15,7 @@ var inpage = require('./routes/inpage');
 var top = require('./routes/top_banner');
 var bigArticle = require('./routes/bigArticle');
 var popup = require('./routes/popup');
+var results = require('./routes/results');
 
 //app.set('views' , './views');
 //app.set('view engine', 'ejs');
@@ -43,6 +44,7 @@ app.use('/inpage', inpage);
 app.use('/top', top);
 app.use('/bigArticle', bigArticle);
 app.use('/popup', popup);
+app.use('/results', results) ;
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
