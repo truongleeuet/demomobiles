@@ -26,7 +26,7 @@ var storage = multer.diskStorage({
         title = req.body.title.replace(/\s/g, '_');
         fileName = './public/uploads/images/bigArticle/' + title ;
         fs.mkdir(fileName, function(err) {
-            if(err) {
+            if (err) {
                 console.error(err);
             }
             cb(null, fileName);
@@ -34,10 +34,10 @@ var storage = multer.diskStorage({
 
     },
     filename: function(req, file, cb) {
-        cb(null, file.originalname );
+        cb(null, file.originalname);
     }
 })
-var upload = multer({ storage: storage })
+var upload = multer({storage: storage})
 
 routerInpage.post('/upload_bigArticle', upload.any(), function(req, res, next) {
     var file = req.files;
@@ -86,9 +86,8 @@ routerInpage.post('/upload_bigArticle', upload.any(), function(req, res, next) {
     '"cpm": []' +
     '});';
 
-
     var site = req.body.slcBanner;
-    switch(site) {
+    switch (site) {
         case 0:
             site = './public/site/page_bigArticle/dantri.html';
             break;
@@ -108,11 +107,11 @@ routerInpage.post('/upload_bigArticle', upload.any(), function(req, res, next) {
             site = './public/site/page_bigArticle/dantri.html';
     }
     fs.writeFile(fileName + '/' + title + '.ads', content, function(err) {
-        if(err) {
+        if (err) {
             next(err);
         }
         fs.readFile(site, 'utf-8', function(err, data) {
-            if(err) {
+            if (err) {
                 console.error(err)
             }
 
@@ -121,7 +120,7 @@ routerInpage.post('/upload_bigArticle', upload.any(), function(req, res, next) {
             var result = data.replace('http://demo.admicro.vn/mobile/bigArticle/mb_code.ads', './' + title + '.ads');
 
             fs.writeFile(fileName + '/' + title + '.html', result, function(err) {
-                if(err) {
+                if (err) {
                     next(err);
                 }
                 var html_res = '../uploads/images/bigArticle/' + title + '/' + title + '.html';
@@ -130,12 +129,6 @@ routerInpage.post('/upload_bigArticle', upload.any(), function(req, res, next) {
         })
 
     });
-
-
-
-
-
-
 
 });
 

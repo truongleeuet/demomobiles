@@ -9,7 +9,7 @@ var path = require('path');
 /* GET users listing. */
 router.get('/', function (req, res, next) {
     //res.send('respond with a resource');
-    res.render(path.resolve(__dirname, '../src/views/login.ejs'))
+    res.render(path.resolve(__dirname, '../src/views/login.ejs'));
 });
 
 router.post('/handerLogin', function (req, res, next) {
@@ -36,19 +36,19 @@ router.post('/handerLogin', function (req, res, next) {
     for (var i = 0; i < arrayUser.length; i++) {
         if ((arrayUser[i].userName === auth.userName) && (arrayUser[i].password === auth.password)) {
             //router.flag = true;
-            req.session.logIn_done = auth;
+            req.session.login_done = auth;
             break;
         }
     }
     //console.log('***' + )
-    if (!req.session.logIn_done) {
+    if (!req.session.login_done) {
         res.redirect('/login');
     }
-    if (req.session.logIn_done) {
+    if (req.session.login_done) {
         res.redirect('/uploads');
     }
 
     //res.end(auth.userName + auth.password);
-})
+});
 
 module.exports = router;

@@ -23,7 +23,7 @@ var storage = multer.diskStorage({
         title = req.body.title.replace(/\s/g, '_');
         fileName = './public/uploads/images/inpage/' + title ;
         fs.mkdir(fileName, function(err) {
-            if(err) {
+            if (err) {
                 console.error(err);
             }
             cb(null, fileName);
@@ -31,60 +31,60 @@ var storage = multer.diskStorage({
 
     },
     filename: function(req, file, cb) {
-        cb(null, file.originalname );
+        cb(null, file.originalname);
     }
 })
-var upload = multer({ storage: storage })
+var upload = multer({storage: storage})
 
 routerInpage.post('/upload_inpage', upload.any(), function(req, res, next) {
     var file = req.files;
 
-    var content = 'var mbzone8870 = new zoneM(8870, {'+
-    '"html": "",'+
-    '"css": "",'+
-    '"type": "14",'+
-    '"mobilead":1,'+
-    '"df": []'+
-    '});'+
-    'mbzone8870.addBanners({'+
-    '"cpc": [],'+
-    '"cpm": ['+
-    '{'+
-    '"id": "267453",'+
-    '"cid": "1047556",'+
-    '"src": "' + file[0].originalname + '",'+
-    '"title": "Tâm bình",'+
-    '"content": "",'+
-    '"link": "'+ req.body.desUrl +'",'+
-    '"type": "14",'+
-    '"os": "",'+
-    '"os_v": "",'+
-    '"dv_t": "",'+
-    '"dv_m": "",'+
-    '"br": "",'+
-    '"br_v": "",'+
-    '"l": "",'+
-    '"la": "",'+
-    '"statustext": "",'+
-    '"cpa": "0",'+
-    '"buttonnote": "",'+
-    '"moblocation": "0",'+
-    '"provider": "",'+
-    '"link3rd": "",'+
-    '"clk_call": "",'+
-    '"ispopup": "0",'+
-    '"color": "",'+
-    '"blogo": "'+ file[1].originalname+'",'+
-    '"bname": "",'+
-    '"view": "0",'+
-    '"download": 0,'+
-    '"star": 0,'+
-    '}]'+
+    var content = 'var mbzone8870 = new zoneM(8870, {' +
+    '"html": "",' +
+    '"css": "",' +
+    '"type": "14",' +
+    '"mobilead":1,' +
+    '"df": []' +
+    '});' +
+    'mbzone8870.addBanners({' +
+    '"cpc": [],' +
+    '"cpm": [' +
+    '{' +
+    '"id": "267453",' +
+    '"cid": "1047556",' +
+    '"src": "' + file[0].originalname + '",' +
+    '"title": "Tâm bình",' +
+    '"content": "",' +
+    '"link": "' + req.body.desUrl + '",' +
+    '"type": "14",' +
+    '"os": "",' +
+    '"os_v": "",' +
+    '"dv_t": "",' +
+    '"dv_m": "",' +
+    '"br": "",' +
+    '"br_v": "",' +
+    '"l": "",' +
+    '"la": "",' +
+    '"statustext": "",' +
+    '"cpa": "0",' +
+    '"buttonnote": "",' +
+    '"moblocation": "0",' +
+    '"provider": "",' +
+    '"link3rd": "",' +
+    '"clk_call": "",' +
+    '"ispopup": "0",' +
+    '"color": "",' +
+    '"blogo": "' + file[1].originalname + '",' +
+    '"bname": "",' +
+    '"view": "0",' +
+    '"download": 0,' +
+    '"star": 0,' +
+    '}]' +
     '});';
 
     var site = req.body.slcBanner;
 
-    switch(site) {
+    switch (site) {
         case 0:
             site = './public/site/page_inpage/dantri.html';
             break;
@@ -105,11 +105,11 @@ routerInpage.post('/upload_inpage', upload.any(), function(req, res, next) {
     }
 
     fs.writeFile(fileName + '/' + title + '.ads', content, function(err) {
-        if(err) {
+        if (err) {
             next(err);
         }
         fs.readFile(site, 'utf-8', function(err, data) {
-            if(err) {
+            if (err) {
                 console.error(err)
             }
 
@@ -118,7 +118,7 @@ routerInpage.post('/upload_inpage', upload.any(), function(req, res, next) {
             var result = data.replace('http://demo.admicro.vn/mobile/background/mb_code.ads', './' + title + '.ads');
 
             fs.writeFile(fileName + '/' + title + '.html', result, function(err) {
-                if(err) {
+                if (err) {
                     next(err);
                 }
                 var html_res = '../uploads/images/inpage/' + title + '/' + title + '.html';
@@ -126,10 +126,6 @@ routerInpage.post('/upload_inpage', upload.any(), function(req, res, next) {
             });
         })
     });
-
-
-
-
 
 });
 
