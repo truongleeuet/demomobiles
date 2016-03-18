@@ -14,10 +14,14 @@ var fs = require('fs');
 var Admzip = require('adm-zip');
 var bluebird = require('bluebird');
 var help = require('./tinyImg');
+var through = require('through2');
+var fs = require('fs');
+var promise = require('bluebird');
 
 //routerInpage.get('/', function(req, res, next) {
 //    res.render(path.resolve(__dirname, '../src/views/inpage/inpage.ejs'))
 //});
+var imageDictionary = {};
 var fileName = '';
 var type = '';
 var edgeImageDirectory;
@@ -60,12 +64,28 @@ routerInpage.post('/upload_top', upload.any(), function (req, res, next) {
         var js = '';
         zipEntries.forEach(function(zipEntry) {
             if(zipEntry.name.indexOf('_edge.js') !== -1) {
-                js = zipEntry.name;
+                js = path.resolve(fileName + '/' + file[0].originalname + '/' + zipEntry.name);
             }
             console.log(zipEntry.name);
-        })
+        });
         edgeImageDirectory = path.resolve(fileName + '/' + file[0].originalname + '/images');
+        var pathFile = fileName + '/' + file[0].originalname;
         help(edgeImageDirectory).tinyImage().then(function () {
+            return editFileJS(js, pathFile);
+        }).then(function() {
+            var script = '<script type="text\/javascript">' +
+                'function gup(name, url) {' +
+                'if (!url) url = location.href;' +
+                'name = name.replace(/[\\[]/,' + '"\\\\\\[").replace(/[\\]]/, "\\\\\\]");' +
+                'var regexS = "[\\\\?&]" + name + "=([^&#]*)";' +
+                'var regex = new RegExp(regexS);' +
+                'var results = regex.exec(url);' +
+                'return results == null ? null : results[1];' +
+                ' }' +
+                'var _width = parseInt(gup(\'wd\'));' +
+                '<\/script>';
+
+            fs.readFile();
             res.end('Done Unzip');
         });
     } else {
@@ -161,6 +181,96 @@ routerInpage.post('/upload_top', upload.any(), function (req, res, next) {
     }
 });
 
+function processImageJob(image, fileName) {
+    return new Promise(function (resolve, reject) {
+        imageEdit = decodeURIComponent(image);
+        console.log(imageEdit, '**************');
+        var imageFile = path.resolve( fileName + '/images/' + '/' + imageEdit);
+        fs.readFile(imageFile, 'UTF-8', function (err, data) {
+            //console.log("prcess Image " + imageFile);
+            if (err) {
+                reject(err);
+            } else {
+                var bitmap = fs.readFileSync(imageFile);
+                if (bitmap.length) {
+                    var base64data = new Buffer(bitmap).toString('base64');
+                    // console.log("image--" + image);
+                    imageDictionary[image] = base64data;
+                    //deferred.resolve(base64data);
+                    resolve(base64data);
+                }
+            }
+
+        });
+    });
+};
+function editFileJS(jsFile, fileName) {
+    console.log('Start EditJs');
+    return new Promise(function (resolve, reject) {
+            fs.createReadStream(path.resolve(jsFile))
+                .pipe(through.obj(function (file, enc, callbackStream) {
+                    console.log('Start')
+                    var s = this;
+                    /* Read out the file */
+                    edgeFile = file.toString("utf8");
+                    //console.log()
+                    /* Replace the image directory with the data url string for base64 xml */
+                    edgeFile = edgeFile.replace(/images\//, '');
+                    /* Get all  image names */
+                    var images = edgeFile.match(/([a-z\-_0-9\/\:\.\%20]*\.(png|jpg|svg|gif|svg))/ig);
+                    if (images == null) {
+                        reject(err);
+                    }
+                    /* Create a get job for each  file */
+                    var imageJobs = [];
+                    console.log('********************');
+                    for (var i = 0; i < images.length; i++) {
+                        imageJobs.push(processImageJob(images[i], fileName));
+                    }
+                    /* Execute image jobs */
+                    promise.all(imageJobs).then(function () {
+
+                        /* Replace images in the file with their base64 equivalent */
+                        //var stringImg = 'im+';
+
+                        for (var x in imageDictionary) {
+                            //console.log(x + '------------');
+                            if (x.indexOf(".png") !== -1) {
+                                //edgeFile = edgeFile.replace(/\,im\+/, ',\'data:image/png;base64,\'+');
+                                edgeFile = edgeFile.replace(x, 'data:image/png;base64,' + imageDictionary[x]);
+
+                            }
+                            if (x.indexOf(".gif") !== -1) {
+                                //edgeFile = edgeFile.replace(/\,im\+/, ',\'data:image/gif;base64,\'+');
+                                edgeFile = edgeFile.replace(x, 'data:image/gif;base64,' + imageDictionary[x]);
+
+                            }
+                            if (x.indexOf(".jpg") !== -1) {
+                                //edgeFile = edgeFile.replace(/\,im\+/, ',\'data:image/jpg;base64,\'+');
+                                edgeFile = edgeFile.replace(x, 'data:image/jpg;base64,' + imageDictionary[x]);
+
+                            }
+                            if (x.indexOf(".svg") !== -1) {
+                                //edgeFile = edgeFile.replace(/\,im\+/, ',\'data:image/svg+xml;base64,\'+');
+                                edgeFile = edgeFile.replace(x, 'data:image/svg+xml;base64,' + imageDictionary[x]);
+
+                            }
+                        }
+                        s.push(edgeFile);
+                        callbackStream();
+                    });
+                })).on('data', function (data) {
+                fs.writeFileSync(path.resolve(__dirname, '' + jsFile), data);
+
+            }).on('error', function (err) {
+                reject(err);
+            }).on('end', function () {
+                resolve();
+                console.log('The end edit file JS');
+            })
+        }
+    )
+};
 routerInpage.use(function (err, req, res, next) {
     res.status(err.status || 500);
     console.log(err);
